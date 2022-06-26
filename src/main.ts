@@ -27,7 +27,7 @@ export async function bootstrap(): Promise<NestFastifyApplication> {
   );
 
   await app.register(fastifyCors, {
-    origin: ['http://localhost:3000', 'https://traihe-su2022.vercel.app/'],
+    origin: ['http://localhost:3000', 'https://traihe-su2022.vercel.app', 'traihe-su2022.vercel.app'],
     allowedHeaders: [
       'Origin',
       'X-Requested-With',
