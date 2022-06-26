@@ -50,8 +50,12 @@ let AppController = class AppController {
     getRoot() {
         return { status: 'OK' };
     }
-    voteStudent({ type }, classroomId, studentId) {
-        return this.appService.voteStudent({ type, classroomId, studentId });
+    voteStudent(classroomId, studentId, vote) {
+        return this.appService.voteStudent({
+            type: vote,
+            classroomId,
+            studentId
+        });
     }
 };
 __decorate([
@@ -66,17 +70,17 @@ __decorate([
     __metadata("design:returntype", Object)
 ], AppController.prototype, "getRoot", null);
 __decorate([
-    (0, common_1.Post)('api/classrooms/:classroomId/students/:studentId/vote'),
+    (0, common_1.Post)('api/classrooms/:classroomId/students/:studentId/vote/:vote'),
     (0, swagger_1.ApiResponse)({
         status: 201,
         description: 'Vote'
     }),
     openapi.ApiResponse({ status: 201, type: Object }),
-    __param(0, (0, common_1.Body)()),
-    __param(1, (0, common_1.Param)('classroomId')),
+    __param(0, (0, common_1.Param)('classroomId')),
+    __param(1, (0, common_1.Param)('studentId')),
     __param(2, (0, common_1.Param)('studentId')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [CreateVoteDto, String, String]),
+    __metadata("design:paramtypes", [String, String, String]),
     __metadata("design:returntype", Object)
 ], AppController.prototype, "voteStudent", null);
 AppController = __decorate([

@@ -41,16 +41,20 @@ export class AppController {
     return { status: 'OK' };
   }
 
-  @Post('api/classrooms/:classroomId/students/:studentId/vote')
+  @Post('api/classrooms/:classroomId/students/:studentId/vote/:vote')
   @ApiResponse({
     status: 201,
     description: 'Vote'
   })
   voteStudent(
-    @Body() { type }: CreateVoteDto,
     @Param('classroomId') classroomId: string,
-    @Param('studentId') studentId: string
+    @Param('studentId') studentId: string,
+    @Param('studentId') vote: string
   ): unknown {
-    return this.appService.voteStudent({ type, classroomId, studentId });
+    return this.appService.voteStudent({
+      type: vote,
+      classroomId,
+      studentId
+    });
   }
 }

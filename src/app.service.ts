@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { History } from './shared/entities/history.entity';
 
+import { History } from './shared/entities/history.entity';
 import { HistoryRepository } from './shared/repositories/history.repository';
 
 @Injectable()
