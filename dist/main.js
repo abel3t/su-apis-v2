@@ -27,7 +27,7 @@ function bootstrap() {
     return __awaiter(this, void 0, void 0, function* () {
         const app = yield core_1.NestFactory.create(app_module_1.AppModule, new platform_fastify_1.FastifyAdapter());
         yield app.register(fastify_cors_1.default, {
-            origin: ['http://localhost:3000', 'https://traihe-su2022.vercel.app/'],
+            origin: '*',
             allowedHeaders: [
                 'Origin',
                 'X-Requested-With',

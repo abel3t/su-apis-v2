@@ -78,7 +78,7 @@ __decorate([
     openapi.ApiResponse({ status: 201, type: Object }),
     __param(0, (0, common_1.Param)('classroomId')),
     __param(1, (0, common_1.Param)('studentId')),
-    __param(2, (0, common_1.Param)('studentId')),
+    __param(2, (0, common_1.Param)('vote')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, String, String]),
     __metadata("design:returntype", Object)
