@@ -49,7 +49,7 @@ export class AppController {
   voteStudent(
     @Param('classroomId') classroomId: string,
     @Param('studentId') studentId: string,
-    @Param('studentId') vote: string
+    @Param('vote') vote: string
   ): unknown {
     return this.appService.voteStudent({
       type: vote,
